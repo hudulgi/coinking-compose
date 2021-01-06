@@ -1,7 +1,7 @@
 version: '3'
 services:
   coinking:
-    image: hudulgi/coinking-server
+    image: hudulgi/coinking
     container_name: coinking
     network_mode: coinking-network
     volumes:
