@@ -1,0 +1,17 @@
+version: '3'
+services:
+  coinking:
+    image: hudulgi/coinking-server
+    container_name: coinking
+    network_mode: coinking-network
+    volumes:
+      - '/home/ubuntu/docker/coinking/data:/usr/src/app/data'
+      - '/home/ubuntu/docker/coinking/buy_list:/usr/src/app/buy_list'
+      - '/home/ubuntu/docker/coinking/config.ini:/usr/src/app/config.ini'
+  coinking-server:
+    image: hudulgi/coinking-server
+    container_name: coinking-server
+    network_mode: coinking-network
+    volumes:
+      - '/home/ubuntu/docker/coinking/data:/usr/src/app/data'
+    restart: always
